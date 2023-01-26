@@ -1,7 +1,5 @@
-# Digital Minimalism in the Metaverse era
 
-(By Ranjith Vijayan)
-
+    Created by Ranjith Vijayan, last modified on Feb 17, 2022
 
 The pandemic has fast-tracked digitalisation for all aspects of our lives. Be it for work, study, entertainment, or socialising; we are having digital solutions amid social distancing and other measures to control spread of the virus. We have learnt how to do product marketing, sales, requirement studies, solution walk-throughs, project kick-offs and bug fixing without going to office, let alone going onsite. We even celebrated go-lives of projects that had commenced after the pandemic had started, wherein the team members – developers, system administrators, testers, project managers, vendors, end users, customers, have never met "in-person". People who joined our office during the pandemic time have left the organization without even visiting the office.
 
