@@ -1,6 +1,4 @@
-# Hello Podman
-
-    Created by Ranjith Vijayan, last modified on Feb 26, 2021
+    Created by Ranjith Vijayan, last modified on Dec 26, 2020
 
 ### TL;DR
 
