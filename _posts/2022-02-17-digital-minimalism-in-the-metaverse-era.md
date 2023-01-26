@@ -1,7 +1,4 @@
-
-
-
-#Digital Minimalism in the Metaverse era
+# Digital Minimalism in the Metaverse era
 
 (By Ranjith Vijayan)
 
@@ -18,9 +15,6 @@ In the 2021 year-end blog post on Bill Gates’ blog, the founder of Microsoft a
 
 **Bill Gates** - founder of Microsoft and the Bill & Melinda Gates Foundation
 
-<p>
-  <img src="/docs/blob/main/blob/image2022-2-16_14-34-0.png" width="350" title="Gates">
-</p>
 
 Gates notes that the pandemic has already “revolutionized” the workplace, with more companies offering flexibility for employees who want to work remotely. “The boundaries between once-discrete areas of work — brainstorming, team meetings, casual conversations in the hallway — are collapsing” Gates writes, and he says remote working will only pull more people into the Metaverse.
 
