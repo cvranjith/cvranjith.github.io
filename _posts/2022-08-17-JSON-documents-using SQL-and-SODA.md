@@ -1,5 +1,6 @@
 
-
+    Created by Ranjith Vijayan on Aug 17, 2022
+    
 This article covers an example of how to easily access JSON documents in Oracle DB without loading! This approach may be useful for some integration use-cases wherein json data needs to be processed/uploaded into traditional tables. Instead of writing complicated parsing & loading routines, the "schema-less" datamodel using JSON will be a natural fit for RESTful development techniques, and the power of SQL would come in handy for analytic requirements.
 
 Oracle 21c introduced a new JSON data type. You should use this in preference to other data types. More details here.
