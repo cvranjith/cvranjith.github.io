@@ -1,3 +1,5 @@
+    Created by Ranjith Vijayan on Feb 01, 2023
+
 When publishing messages to IBM MQ using a Java client, traditional IBM MQ applications may have trouble reading the messages. This is often due to the "RFH2" header that is included in the message, which carries JMS-specific information.
 
 The issue is usually related to the "TargetClient" configuration. IBM MQ messages are made up of three components:
