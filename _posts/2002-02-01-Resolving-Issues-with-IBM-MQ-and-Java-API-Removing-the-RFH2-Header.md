@@ -27,13 +27,15 @@ To remove the RFH2 header, one of the below two methods can be employed
 
 
 1. Using TC(MQ)
-  While creating the queue (on IBM MQ side), add the keyword "TC(MQ)". This will ensure that any client, including the Java Client, will use the Target Client as MQ, which is suitable for traditional clients.
+
+While creating the queue (on IBM MQ side), add the keyword "TC(MQ)". This will ensure that any client, including the Java Client, will use the Target Client as MQ, which is suitable for traditional clients.
   
   ```
   define Q(MyJMSQueueName) queue(MYMQ.Q) TC(MQ)
   ```
   
 2. using URL Parameter "targetClient=1"
+
     Use the URL parameter "targetClient=1" in the queue name. This option is useful if you don't have control over how the MQ administrator creates the queue, but you can set the preference for targetClient to "1" (for MQ) when connecting to the queue as a client.
     
   ```
