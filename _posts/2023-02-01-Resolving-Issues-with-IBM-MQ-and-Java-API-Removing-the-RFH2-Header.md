@@ -4,9 +4,9 @@ When publishing messages to IBM MQ using a Java client, traditional IBM MQ appli
 
 The issue is usually related to the "TargetClient" configuration. IBM MQ messages are made up of three components:
 
-    The IBM MQ Message Descriptor (MQMD)
-    An IBM MQ MQRFH2 header
-    The message body
+* The IBM MQ Message Descriptor (MQMD)
+* An IBM MQ MQRFH2 header
+* The message body
 
 The MQRFH2 header is optional and its inclusion is controlled by the "TARGCLIENT" flag in the JMS Destination class. This flag can be set using the IBM MQ JMS administration tool. When the recipient is a JMS application, the MQRFH2 header should always be included. However, when sending directly to a non-JMS application, the header should be omitted as these applications do not expect it in the IBM MQ message.
 
@@ -14,7 +14,7 @@ The MQRFH2 header is optional and its inclusion is controlled by the "TARGCLIENT
 The "RFH2" header (Reply-To-Format header) is an IBM MQ header used for routing JMS messages. It contains information about the format of the message such as its encoding, character set, and data format. The header allows messages to be properly processed by different systems and specifies the format of reply messages.
 
 
-### What is Target Cleint
+### What is Target Client
 
 "IBM MQ Target Client" is a component of IBM MQ, a messaging and integration middleware solution. It is a software library that allows applications to connect to IBM MQ and receive messages. The Target Client provides a high-performance, reliable, and secure way for applications to receive messages and supports multiple programming languages.
 
