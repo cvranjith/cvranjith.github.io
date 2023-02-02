@@ -1,11 +1,11 @@
-    Created by Ranjith Vijayan on Feb 02, 2023
+    Created by Ranjith Vijayan on Apr 02, 2022
 
 This post is created for my own reference of k8s resources as part of learning
 
 
 Configmap based on yaml declaration
 
-    Create yaml file
+* Create yaml file
         e.g.
 
 ``` yaml
@@ -32,20 +32,20 @@ data:
 ```
 
 
-create using yaml
+* create resource using yaml
 ```
     kubectl create -f cfg-map.yaml
 ```
 
-Configmaps can be crated from file using --from-file argument. Multiple files in a directory can be supplied to configmap by supplying the directory name. This is useful for binary files.
+* Configmaps can be created from file using --from-file argument. Multiple files in a directory can be supplied to configmap by supplying the directory name. This is useful for binary files.
 
 
-In the below example the there are 2 files in "property" folder, and we can create configmap using this command
+* In the below example the there are 2 files in "property" folder, and we can create configmap using this command
 ```
 kubectl create configmap prop-keystore --from-file=property -n fcubs
 ```
 
-To view the configmap. Please note in k8s dashboard the binary data won't be displayed. Use below command to view the binary data (in base64 format)
+* To view the configmap. Please note in k8s dashboard the binary data won't be displayed. Use below command to view the binary data (in base64 format)
 
 ```
 kubectl get cm prop-keystore -n fcubs -o json
