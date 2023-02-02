@@ -6,7 +6,7 @@ layout: page
 
 Welcome to my blog!
 
-My name is Ranjith and I am a solution architect at Oracle with over 23 years of experience in the IT industry in Banking and Finance Domain. I have worked extensively in Oracle Database and Middleware Technologies. In the recent years I focus on cloud native technologies such as Microservice Architecture, Cloud Computing, DevOps, and Infrastructure as Code. My hands-on experience in Oracle Technologies as well as Container technologies, such as Docker and Kubernetes, along with proficiency in both AWS and Oracle Cloud Infrastructure platforms, allows me to share insights and knowledge on these topics through my writing.
+My name is Ranjith and I am a solution architect at Oracle with over 23 years of experience in the IT industry in the Banking and Financial Services Domain. I am a technologist worked extensively in the Oracle Database and Middleware Technologies. In the recent years I focus on cloud native technologies such as Microservice Architecture, Cloud Computing, DevOps, and Infrastructure as Code. My hands-on experience in Oracle as well as Container technologies, such as Docker and Kubernetes, along with proficiency in both AWS and Oracle Cloud Infrastructure platforms, allows me to share insights and knowledge on these topics through my writing.
 
 In my free time, I enjoy speed-cubing, running and pursuing photography. 
 
