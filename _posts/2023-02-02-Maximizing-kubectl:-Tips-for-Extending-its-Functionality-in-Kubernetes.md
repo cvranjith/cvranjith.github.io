@@ -15,54 +15,54 @@ To achieve something like `docker ps` with `kubectl`, you can create a custom sc
 
 1. Create a file by name `"kubectl-ps"` in one of the directories of your $PATH
 
-``` bash
-#!/bin/bash
+    ``` bash
+    #!/bin/bash
 
-kubectl get pods "$@"
-```
+    kubectl get pods "$@"
+    ```
 
 2. Now if you type `kubectl ps` it will execute your custom script
 
-```
+    ```
 
-kubectl ps
-No resources found in default namespace.
+    kubectl ps
+    No resources found in default namespace.
 
-```
+    ```
 
-Since we have added "$@" in the custom script we can pass arguments 
+    Since we have added "$@" in the custom script we can pass arguments 
 
-e.g.
+    e.g.
 
-```
-kubectl ps -n kube-system 
-NAME                                      READY   STATUS      RESTARTS   AGE
-coredns-597584b69b-m8wfv                  1/1     Running     0          7d8h
-local-path-provisioner-79f67d76f8-lnq2j   1/1     Running     0          7d8h
-metrics-server-5f9f776df5-gbmrv           1/1     Running     0          7d8h
-helm-install-traefik-crd-tdpbh            0/1     Completed   0          7d8h
-helm-install-traefik-nhnkn                0/1     Completed   1          7d8h
-svclb-traefik-8b85b943-5f2nb              2/2     Running     0          7d8h
-traefik-66c46d954f-7ft6n                  1/1     Running     0          7d8h
-```
+    ```
+    kubectl ps -n kube-system 
+    NAME                                      READY   STATUS      RESTARTS   AGE
+    coredns-597584b69b-m8wfv                  1/1     Running     0          7d8h
+    local-path-provisioner-79f67d76f8-lnq2j   1/1     Running     0          7d8h
+    metrics-server-5f9f776df5-gbmrv           1/1     Running     0          7d8h
+    helm-install-traefik-crd-tdpbh            0/1     Completed   0          7d8h
+    helm-install-traefik-nhnkn                0/1     Completed   1          7d8h
+    svclb-traefik-8b85b943-5f2nb              2/2     Running     0          7d8h
+    traefik-66c46d954f-7ft6n                  1/1     Running     0          7d8h
+    ```
 
-Another example.
+    Another example.
 
-```
-kubectl ps -A                                                                                     ✔  default ○  @fsgbu-mum-1019 
-NAMESPACE         NAME                                      READY   STATUS      RESTARTS   AGE
-kube-system       coredns-597584b69b-m8wfv                  1/1     Running     0          7d8h
-kube-system       local-path-provisioner-79f67d76f8-lnq2j   1/1     Running     0          7d8h
-kube-system       metrics-server-5f9f776df5-gbmrv           1/1     Running     0          7d8h
-kube-system       helm-install-traefik-crd-tdpbh            0/1     Completed   0          7d8h
-kube-system       helm-install-traefik-nhnkn                0/1     Completed   1          7d8h
-kube-system       svclb-traefik-8b85b943-5f2nb              2/2     Running     0          7d8h
-kube-system       traefik-66c46d954f-7ft6n                  1/1     Running     0          7d8h
-ingress-test-ns   obpm-deployment-77dcdf4c78-cf2rh          1/1     Running     0          7d8h
-ingress-test-ns   obpm-deployment-77dcdf4c78-smtr9          1/1     Running     0          7d8h
-ingress-test-ns   fcubs-deployment-7ccd4b66fb-4r7fh         1/1     Running     0          7d8h
-ingress-test-ns   fcubs-deployment-7ccd4b66fb-z6xxz         1/1     Running     0          7d8h
-```
+    ```
+    kubectl ps -A                                                                                     ✔  default ○  @fsgbu-mum-1019 
+    NAMESPACE         NAME                                      READY   STATUS      RESTARTS   AGE
+    kube-system       coredns-597584b69b-m8wfv                  1/1     Running     0          7d8h
+    kube-system       local-path-provisioner-79f67d76f8-lnq2j   1/1     Running     0          7d8h
+    kube-system       metrics-server-5f9f776df5-gbmrv           1/1     Running     0          7d8h
+    kube-system       helm-install-traefik-crd-tdpbh            0/1     Completed   0          7d8h
+    kube-system       helm-install-traefik-nhnkn                0/1     Completed   1          7d8h
+    kube-system       svclb-traefik-8b85b943-5f2nb              2/2     Running     0          7d8h
+    kube-system       traefik-66c46d954f-7ft6n                  1/1     Running     0          7d8h
+    ingress-test-ns   obpm-deployment-77dcdf4c78-cf2rh          1/1     Running     0          7d8h
+    ingress-test-ns   obpm-deployment-77dcdf4c78-smtr9          1/1     Running     0          7d8h
+    ingress-test-ns   fcubs-deployment-7ccd4b66fb-4r7fh         1/1     Running     0          7d8h
+    ingress-test-ns   fcubs-deployment-7ccd4b66fb-z6xxz         1/1     Running     0          7d8h
+    ```
 
 
 Of course, this is a trivial example, but you get the idea. Using this extensibility feature, you can build useful, convenient utilities with kubectl, which can save a lot of time and effort.
