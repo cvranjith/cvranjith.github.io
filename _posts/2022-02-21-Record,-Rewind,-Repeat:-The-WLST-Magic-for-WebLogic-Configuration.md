@@ -10,11 +10,13 @@ To record the WLST commands from the console, please follow the steps outlined b
 
 * Go to Preferences→ WLST Script Recording (Preferences is located at the top center bar next to Home and Logout options)
 * Fill in the general properties such as base script directory, script file name, append mode etc.
+[![general properties](wlst-1.png)
 * Press Lock and Edit
 * go to Preferences→WLST Script Recording → Control → Start Recording
+[![general properties](wlst-2.png)
 * Now you can do the actions using the console and after doing the changes come back to the WLST Script Recording and hit "Stop recording"
 * The WLST commands recorded will be available in the file specified in "General tab", it will also be shown in the window.
-
+[![general properties](wlst-3.png)
 
 The Administration Console does not capture WLST commands related to the following:
 
