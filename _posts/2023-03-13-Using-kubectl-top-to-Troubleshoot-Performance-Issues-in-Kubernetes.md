@@ -2,7 +2,7 @@
 
 In this blog post, we will focus on kubectl top commands for pods and nodes, and some examples of how to use these commands to sort the pods by CPU/memory usage.
 
-*** kubectl top pod
+### kubectl top pod
 
 The `kubectl top` pod command allows you to get CPU and memory usage information for pods running in your cluster. To use this command, simply run:
 
@@ -31,7 +31,7 @@ kubectl top pod --sort-by memory
 ```
 
 
-*** kubectl top node
+### kubectl top node
 
 The kubectl top node command allows you to get CPU and memory usage information for nodes in your cluster. To use this command, simply run:
 
@@ -57,7 +57,7 @@ This will show the nodes sorted by CPU usage in descending order. To sort the no
 kubectl top node --sort-by memory
 ```
 
-*** Other common useful features
+### Other common useful features
 
 Here are some other common features that you may find useful when using kubectl top:
 
@@ -88,5 +88,7 @@ kubectl exec <pod-name> -c <container-name> -- top
 ```
 
 This will show the top processes consuming CPU in the container.
+
+### Conclusion
 
 In conclusion, kubectl top is a powerful command that allows you to monitor the resource usage of your Kubernetes cluster. With the ability to sort by CPU and memory usage, as well as other useful features, this command can help you troubleshoot performance issues and optimize resource allocation.
