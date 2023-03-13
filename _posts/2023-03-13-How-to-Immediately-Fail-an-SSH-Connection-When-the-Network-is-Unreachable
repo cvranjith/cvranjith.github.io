@@ -1,4 +1,3 @@
-
 When working with remote servers over an SSH connection, it can be frustrating when the connection becomes unresponsive due to network issues. This is especially true when using a VPN to connect to a remote server, as disconnecting the VPN can cause the SSH session to become unresponsive and eventually timeout after several minutes.
 
 Fortunately, there is a way to configure the SSH client to immediately fail the connection when it detects that the network is unreachable. In this blog post, we'll show you how to set up your SSH client to send keepalive packets and terminate the session if it does not receive a response from the server.
