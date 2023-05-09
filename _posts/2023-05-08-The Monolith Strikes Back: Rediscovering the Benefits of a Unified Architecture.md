@@ -50,7 +50,7 @@ Another interesting approach is the Domain-Driven Monolith, where each vertical 
 
 The case study of Amazon Prime Video emphasizes the importance of choosing the appropriate combination of serverless and microservices architectures that suits specific use cases. While serverless computing may offer advantages such as scalability and reduced operational overhead, it may not be the optimal solution for all applications or systems. Similarly, microservices can provide increased flexibility, but they may introduce unnecessary complications in certain scenarios. Prior to selecting architectural patterns, developers should meticulously evaluate their project requirements and limitations. The Amazon Prime Video team discovered that eliminating serverless components from their architecture and adopting a monolithic approach led to better optimization of both cost and performance.
 
-![monolith-vs-ms](https://github.com/cvranjith/cvranjith.github.io/blob/main/imgs/striking-balance.jpg?raw=true)
+![monolith-vs-ms](https://github.com/cvranjith/cvranjith.github.io/blob/main/imgs/striking-balance.png?raw=true)
 
 
 ## Beyond the Buzzwords: Making Informed Decisions
