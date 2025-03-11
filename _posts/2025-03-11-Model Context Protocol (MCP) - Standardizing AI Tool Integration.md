@@ -1,4 +1,4 @@
-# Model Context Protocol (MCP): Standardizing AI Tool Integration
+# Model Context Protocol (MCP) - Standardizing AI Tool Integration
 
 ## **Why Standardization Matters**
 Imagine if every cloud provider required a different container format—Docker images wouldn’t work on OCI, AWS, Azure, or Google Cloud. Instead, we agreed on **OCI (Open Container Initiative)** (not Oracle Cloud!), ensuring **containers run anywhere** regardless of the tool used (Docker, Podman, containerd). This **standardization** unlocked massive innovation in DevOps.
