@@ -11,7 +11,7 @@ Here’s why Oracle Database continues to be the **gold standard for banking app
 Oracle was the **first commercial relational database** and has evolved continuously for over **four decades**, setting the benchmark for performance, reliability, and innovation. It has adapted to modern needs with **AI-driven features, converged database capabilities, and best-in-class security**, making it both the **oldest and the most advanced** database in the world today.
 
 ## 2. Converged Database: One Database for All Workloads
-Unlike general-purpose databases that focus only on structured data, Oracle provides a **truly converged database**, supporting:
+Unlike general-purpose databases that require different types of databases for different workloads, Oracle provides a truly converged database that supporting:
 - **Relational (SQL)**
 - **JSON Document Store**
 - **Graph DB**
