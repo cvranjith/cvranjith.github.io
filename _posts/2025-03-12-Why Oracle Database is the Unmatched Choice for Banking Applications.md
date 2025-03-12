@@ -75,12 +75,6 @@ Beyond its broad feature set, Oracle stands out due to its **enterprise-grade re
 - **Scalability & Performance:** With **Exadata and RAC**, Oracle ensures smooth scaling without sharding.
 - **AI & Analytics Integration:** Oracle supports **in-database AI/ML and vector search**, making it future-proof.
 
-# Case Studies & Real-World Examples
-Many of the world’s largest banks, such as **HSBC and Deutsche Bank**, have consolidated their databases on **Oracle Exadata Cloud@Customer**, reducing costs while improving security and performance.
-- **GCB Bank** reported major transaction speed improvements after switching to Exadata.
-- **Deutsche Bank migrated 7,000 databases to Oracle**, saving **hundreds of millions** in operational costs.
-- **Financial firms replacing legacy databases with Oracle** have reported **faster processing times and stronger data integrity**.
-
 # Cost-Benefit Analysis
 Oracle's **total cost of ownership (TCO)** is often lower than general-purpose databases due to:
 - **Operational savings from automation and reduced manual tuning.**
