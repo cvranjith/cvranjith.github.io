@@ -104,6 +104,6 @@ Oracle's **total cost of ownership (TCO)** is often lower than general-purpose d
 
 ---
 
-# Conclusion: The Only Choice for Banking
+## Conclusion
 For financial institutions looking to **scale, innovate, and secure their operations**, Oracle Database remains the **gold standard in banking technology**, delivering **unmatched reliability, security, and cost efficiency**.
 
