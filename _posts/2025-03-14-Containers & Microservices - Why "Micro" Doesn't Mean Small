@@ -27,6 +27,8 @@ Imagine you have a house representing an application running on a **Virtual Mach
 
 The word **"micro" in microservices refers to modularity, not size**. A microservice is **independent**, meaning it needs its **own resources, runtime, and supporting components**.  
 
+![houses](https://github.com/cvranjith/cvranjith.github.io/blob/main/imgs/houses.png)
+
 Using the house metaphor again, consider two approaches when moving from VMs to containers:  
 1. **Keeping the entire house as-is inside a container** → This is similar to running a **monolithic** application in a container, where all functionalities remain tightly coupled.  
 2. **Breaking the house into smaller units** → This is the **microservices approach**. Each smaller house (service) is independent, meaning it needs **its own kitchen, bathrooms, and utilities**. While this approach enables better scalability and flexibility, it also **adds overhead** because each unit must function autonomously.  
