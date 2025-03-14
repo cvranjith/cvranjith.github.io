@@ -9,6 +9,8 @@ However, **containerization is not about reducing resource usage—it’s about 
 
 Imagine you have a house representing an application running on a **Virtual Machine (VM)**. Now, you move that house into a **containerized environment**. Does the house suddenly shrink? **No!** The number of people inside the house remains the same, and they still need the same space, resources, and utilities.
 
+![vm vs container](https://github.com/cvranjith/cvranjith.github.io/blob/main/imgs/vm_vs_container_1.png)
+![vm vs contaner](https://github.com/cvranjith/cvranjith.github.io/blob/main/imgs/vm_vs_container_2.png?raw=true)
 
 📌 **Key takeaway:** If an app requires **X amount of resources on a VM, it will still require X on a container**. **Containerization does not magically reduce CPU, RAM, or storage needs.** The **workload defines the resource needs, not the deployment model**.  
 
