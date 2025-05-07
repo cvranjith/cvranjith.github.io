@@ -2,12 +2,17 @@
 
 In the monolithic era of software, picture 8 developers working inside a large shared bungalow. This bungalow represents a monolithic application - one big, unified codebase where everyone operates under the same roof.
 
+![monolith](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/monolith-1.png)
+
+
 Inside the house are 10 power sockets - representing CPU cores. Each developer (i.e. a unit of workload) plugs in their laptop to just one socket. Standing at the entrance is a security guard - the quota enforcer - who monitors the power board to ensure the total socket usage doesn’t exceed the building’s capacity.
 
 At any given time, only 8 of the 10 sockets are in use, and the guard sees all green lights on the power board. Everyone works happily - predictable usage, and no socket shortages.
 
-
 Then came microservices - and with them, modernization.
+
+
+![apartment](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/apartment.png)
 
 Now, each developer is given their own studio apartment - representing a Kubernetes pod. These are cleaner, isolated, and individually managed. The same security guard has now been promoted to manage the entire apartment complex. He still tracks how many sockets are in use across all apartments.
 
@@ -17,8 +22,9 @@ One replies: “I really only need 1 socket to work, but during setup I’ll plu
 
 The guard allows it and updates his tracker. This continues for the next few tenants.
 
-
 But when the 6th person arrives and makes the same request, the guard raises a hand: “Stop - we’ve reached the limit. You can't move in”
+
+![apartment](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/limit.png)
 
 Confused, the new tenant protests: “But no one’s using all their 2 sockets at the same time!”
 
