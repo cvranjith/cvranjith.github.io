@@ -85,7 +85,10 @@ sequenceDiagram
 
 ## Key Code
 
-You’ll find the full working package and ORDS handler in my GitHub repo (link below).  
+You’ll find the full working package and ORDS handler in my GitHub repo (link below).
+
+https://github.com/cvranjith/apex-claude-proxy
+
 Highlights:
 
 - **Native JSON parsing**: Uses `JSON_OBJECT_T` / `JSON_ARRAY_T` instead of `APEX_JSON` for cleaner, standard parsing.
@@ -114,9 +117,75 @@ For **general-purpose chat + content creation** with JSON analysis:
 
 ---
 
+## ORDS and APEX Setup
+
+For this integration to work with the APEX GenAI chat widget, your ORDS API **must** have a POST handler with a URI template ending in:
+
+```
+chat/completions
+```
+
+### ORDS Definition Example
+```plsql
+  ORDS.DEFINE_TEMPLATE(
+      p_module_name    => 'claude-proxy',
+      p_pattern        => 'chat/completions',
+      p_priority       => 0,
+      p_etag_type      => 'HASH',
+      p_etag_query     => NULL,
+      p_comments       => NULL);
+
+  ORDS.DEFINE_HANDLER(
+      p_module_name    => 'claude-proxy',
+      p_pattern        => 'chat/completions',
+      p_method         => 'POST',
+      p_source_type    => 'plsql/block',
+      p_mimes_allowed  => NULL,
+      p_comments       => NULL,
+      p_source         => 
+'      DECLARE
+        l_body CLOB := :body_text;
+        l_out  CLOB;
+      BEGIN
+        l_out := claude_proxy.chat_completions(l_body);
+        OWA_UTIL.mime_header(''application/json'', TRUE);
+        HTP.prn(l_out);
+      END;
+');
+```
+
+---
+
+### APEX Generative AI Service Definition
+In APEX, go to:
+
+**Workspace Utilities → Generative AI Services → Create New Service**  
+Choose **"OpenAI"** as the service provider.
+
+- **URL**:  
+  Set it to your ORDS handler **without** the `/chat/completions` suffix.  
+  Example:  
+  ```
+  https://xxxx.adb.ap-singapore-1.oraclecloudapps.com/ords/xxx/claude-proxy/v1
+  ```
+
+- **Additional Attributes**:  
+  Add any attributes your target model requires.  
+  For example, many Claude models require `max_tokens`:
+  ```json
+  {"max_tokens": 1024}
+  ```
+
+- **AI Model**:  
+  Declare the model ID you want to use. Example:
+  ```
+  claude-opus-4-1-20250805
+  ```
+
+---
 ## Works with OCI Generative AI Agents Too
 
-Oracle’s official blog *Integrating OCI Generative AI Agents with Oracle APEX Apps for RAG-powered Conversational Experience* demonstrates a different approach:  
+Oracle’s blog *Integrating OCI Generative AI Agents with Oracle APEX Apps for RAG-powered Conversational Experience* demonstrates a different approach:  
 They use **low-level REST API calls** directly to OCI Generative AI and render messages in a **classic report** to mimic a chat experience.
 
 That works well, but it’s still a **custom UI** — you build and maintain the conversation rendering logic yourself.
@@ -143,16 +212,6 @@ You get:
 
 ---
 
-## Next Steps
-
-1. Clone the repo from [*GitHub link here*].
-2. Import the package into your APEX schema.
-3. Create the ORDS module/handler.
-4. Point your GenAI DA’s endpoint to your proxy URL.
-
-You’ve now extended APEX’s low-code AI to **any model**, securely and without intermediaries.
-
----
 
 ### Bonus Idea
 
