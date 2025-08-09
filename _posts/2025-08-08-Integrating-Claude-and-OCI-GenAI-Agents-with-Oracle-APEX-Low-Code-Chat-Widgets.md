@@ -1,10 +1,8 @@
-# Bringing Claude (and Any Model) into Oracle APEX Low-Code Chat Widgets — Without Third-Party Routers
-
 Oracle APEX’s GenAI Dynamic Actions make it effortless to drop an AI chat widget into your app.  
-The catch? They’re hard-wired for **OpenAI’s API schema**.  
+The catch? As of now they’re hard-wired only for certain API providers such as OpenAI, Cohere, and OCI Gen AI.
 If your favorite model—say Anthropic’s Claude—uses a different JSON format, it won’t plug in directly.
 
-I ran into this exact roadblock… and found a clean workaround.  
+I ran into this exact roadblock… and found a workaround.  
 With one small PL/SQL proxy layer, you can keep APEX’s low-code experience **and** talk to **any** API — all without signing up for third-party routing services or sharing your API keys outside your control.
 
 ---
