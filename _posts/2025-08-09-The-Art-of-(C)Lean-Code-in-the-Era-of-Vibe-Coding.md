@@ -1,6 +1,8 @@
 # The Art of (C)Lean Code in the Era of Vibe-Coding
 *How my AI-built spaghetti turned into a clean kitchen (but not without some broken plates)*
 
+![spagetti](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/spagetti.png)
+
 ---
 
 ## The Beginning — When Code Felt Like Handcraft
@@ -205,6 +207,8 @@ function calculateTotal(items) {
 ```
 
 ---
+
+![spagetti](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/refactored.png)
 
 ## Red Flags to Watch
 - Magic numbers or strings everywhere
