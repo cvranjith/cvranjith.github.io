@@ -1,9 +1,10 @@
-> **TL;DR**: `DBMS_CLOUD.PUT_OBJECT` can upload binaries, but it doesn’t let you attach **user-defined metadata**. To set metadata (the `opc-meta-*` headers), call the **Object Storage REST API** directly from PL/SQL using `DBMS_CLOUD.SEND_REQUEST` and authenticate with an **OCI API Signing Key** credential (not an Auth Token).
+**TL;DR**:
+`DBMS_CLOUD.PUT_OBJECT` can upload binaries, but it doesn’t let you attach **user-defined metadata**. To set metadata (the `opc-meta-*` headers), call the **Object Storage REST API** directly from PL/SQL using `DBMS_CLOUD.SEND_REQUEST` and authenticate with an **OCI API Signing Key** credential (not an Auth Token).
 
 ---
 
 ## Why this trick?
-If you need to stamp files with business context—say `customerId=C-1029` or `docType=invoice`—you must send those as `opc-meta-*` HTTP headers on the **PUT** request. That’s not supported by `DBMS_CLOUD.PUT_OBJECT`, so we invoke the REST endpoint ourselves with `DBMS_CLOUD.SEND_REQUEST`.
+If you need to stamp files not only with business context—say customerId=C-1029 or docType=invoice—but also with technical metadata like content-type=application/pdf —you must send those as `opc-meta-*` HTTP headers on the **PUT** request. That’s not supported by `DBMS_CLOUD.PUT_OBJECT`, so we invoke the REST endpoint ourselves with `DBMS_CLOUD.SEND_REQUEST`.
 
 > **Heads-up on credentials**: For `SEND_REQUEST`, use an **API key** (RSA key + fingerprint) credential. Auth Tokens are great for other `DBMS_CLOUD` operations, but they don’t work reliably for `SEND_REQUEST` calls to the Object Storage REST endpoints.
 
