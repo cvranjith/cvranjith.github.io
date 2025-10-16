@@ -11,7 +11,8 @@ A rule-based system could do that faster, cheaper, and with fewer hallucinations
 
 You’re not alone.
 
-![demo](_posts/img/agent-demo.png)
+![demo](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/img/agent-demo.png)
+
 ---
 
 ## 🧠 The Engineer’s Skepticism: Where’s the Real Innovation?
@@ -45,7 +46,7 @@ An agentic system can **adapt**:
 
 It’s not about replacing deterministic rules — it’s about making orchestration **resilient in the face of uncertainty.**
 
-![demo](_posts/img/agent-flow.png)
+![flow](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/img/agent-flow.png)
 
 ---
 
@@ -87,7 +88,7 @@ It’s not that agents are smart — it’s that they’re *autonomous participa
 
 ## 🏗️ Emerging Patterns of Agentic Architecture
 
-![demo](_posts/img/agent-architecture.png)
+![arch](https://github.com/cvranjith/cvranjith.github.io/blob/main/_posts/img/agent-architecture.png)
 
 ### 🧠 LLM-as-Orchestrator
 The model decomposes goals into subtasks and routes to the right tools.
